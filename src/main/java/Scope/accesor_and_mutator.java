@@ -42,3 +42,43 @@
 // they often have one parameter that is the same type as the variable 
 // they’re trying to change.
 
+public class CheckingAccount{
+  private String name;
+  private int balance;
+  private String id;
+
+  public CheckingAccount(String inputName, int inputBalance, String inputId){
+    name = inputName;
+    balance = inputBalance;
+    id = inputId;
+  }
+
+  public int getBalance(){
+    return balance;
+  }
+  
+  public void setBalance(int newBalance){
+    balance = newBalance;
+  }
+
+}
+
+
+public class Bank{
+  private CheckingAccount accountOne;
+  private CheckingAccount accountTwo;
+
+  public Bank(){
+    accountOne = new CheckingAccount("Zeus", 100, "1");
+    accountTwo = new CheckingAccount("Hades", 200, "2");
+  }
+
+  public static void main(String[] args){
+    Bank bankOfGods = new Bank();
+    System.out.println(bankOfGods.accountOne.getBalance());
+    bankOfGods.accountOne.setBalance(5000);
+    System.out.println(bankOfGods.accountOne.getBalance());
+
+  }
+
+}
