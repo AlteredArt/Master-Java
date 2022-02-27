@@ -1,7 +1,7 @@
 // equals()
 // With objects, such as Strings, we can’t use the primitive equality 
-// operator == to check for equality between two strings. To test 
 // equality with strings, we use a built-in method called equals().
+// operator == to check for equality between two strings. To test 
 
 // For example:
 
@@ -66,3 +66,7 @@ public class Password {
   }
   
 }
+
+
+// Output:
+// false
